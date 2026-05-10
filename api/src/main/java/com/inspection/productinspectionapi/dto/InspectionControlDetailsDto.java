@@ -1,0 +1,26 @@
+package com.inspection.productinspectionapi.dto;
+
+import java.time.LocalDateTime;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
+@AllArgsConstructor
+public class InspectionControlDetailsDto {
+    private final Long id;
+    private final LocalDateTime inspectionDateTime;
+    private final String results;
+    private final Boolean productSafe;
+
+    private final Long productId;
+    private final String productName;
+    private final String productSerialNumber;
+    private final String productCountryOrigin;
+
+    private final Long inspectionBodyId;
+    private final String inspectionBodyName;
+}
+

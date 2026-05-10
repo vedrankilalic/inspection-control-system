@@ -1,0 +1,189 @@
+:root {
+  --brand-1: #4f46e5; 
+  --brand-2: #06b6d4; 
+  --brand-3: #22c55e; 
+
+  --bs-primary: var(--brand-1);
+  --bs-link-color: var(--brand-1);
+  --bs-link-hover-color: color-mix(in srgb, var(--brand-1) 86%, black);
+}
+
+body {
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(79, 70, 229, 0.14), transparent 55%),
+    radial-gradient(1200px 600px at 90% 0%, rgba(6, 182, 212, 0.12), transparent 55%),
+    var(--bs-body-bg);
+}
+
+.navbar.appNavbar {
+  background: linear-gradient(90deg, rgba(79, 70, 229, 0.12), rgba(6, 182, 212, 0.10));
+  backdrop-filter: blur(10px);
+}
+
+.navbar.appNavbar .navbar-brand {
+  letter-spacing: -0.2px;
+}
+
+.card.appCard {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.card.appCard:hover {
+  transform: translateY(-2px);
+  border-color: rgba(79, 70, 229, 0.25);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.btn {
+  border-radius: 12px;
+}
+
+.btn.btn-sm {
+  border-radius: 10px;
+}
+
+.btn-primary {
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.18);
+}
+
+.btn-primary:focus-visible {
+  box-shadow: 0 0 0 0.25rem rgba(79, 70, 229, 0.25);
+}
+
+.table thead th {
+  font-weight: 600;
+  color: var(--bs-body-color);
+  background: rgba(255, 255, 255, 0.65);
+}
+
+@media (prefers-color-scheme: dark) {
+  .table thead th {
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+.appHero {
+  border-radius: 18px;
+  padding: 18px 18px;
+  border: 1px solid rgba(79, 70, 229, 0.18);
+  background: linear-gradient(135deg, rgba(79, 70, 229, 0.14), rgba(6, 182, 212, 0.10));
+}
+
+.homeHero {
+  background: linear-gradient(125deg, #312e81 0%, #1e3a5f 45%, #0f766e 100%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.25);
+}
+
+.homeHero .letter-spacing {
+  letter-spacing: 0.12em;
+}
+
+.homeHeroGlow {
+  position: absolute;
+  inset: -40% -20% auto auto;
+  width: min(520px, 90vw);
+  height: min(520px, 90vw);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.homeStat {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: color-mix(in srgb, var(--bs-body-bg) 92%, transparent);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+@media (prefers-color-scheme: dark) {
+  .homeStat {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+}
+
+.navbar.appNavbar .nav-pills .nav-link {
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  color: var(--bs-body-color);
+}
+
+.navbar.appNavbar .nav-pills .nav-link:hover {
+  background: rgba(79, 70, 229, 0.1);
+}
+
+.navbar.appNavbar .nav-pills .nav-link.active {
+  background: var(--bs-primary);
+  color: #fff;
+}
+
+.appFormSimple .form-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: var(--bs-secondary-color);
+}
+
+.appFormSimple .form-control,
+.appFormSimple .form-select {
+  border-radius: 10px;
+}
+
+.appFormSimple .form-text {
+  font-size: 0.8rem;
+}
+
+#datepicker-portal {
+  position: relative;
+  z-index: 4000;
+  overflow: visible;
+}
+
+.react-datepicker-popper {
+  z-index: 4000 !important;
+}
+
+.react-datepicker-popper .react-datepicker {
+  overflow: visible;
+  max-height: none;
+}
+
+.react-datepicker__day--outside-month {
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.react-datepicker .react-datepicker__month-dropdown,
+.react-datepicker .react-datepicker__year-dropdown {
+  padding: 0.2rem 0.35rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+}
+
+.react-datepicker__input-time-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.65rem;
+  margin: 0;
+  border-top: 1px solid var(--bs-border-color, #dee2e6);
+}
+
+.react-datepicker__input-time-container .react-datepicker-time__caption {
+  margin: 0;
+  font-size: 0.8125rem;
+  white-space: nowrap;
+}
+
+.react-datepicker__input-time-container input {
+  min-width: 5.5rem;
+  padding: 0.25rem 0.4rem;
+  border: 1px solid var(--bs-border-color, #dee2e6);
+  border-radius: 6px;
+  font-size: 0.875rem;
+}
+
+.react-datepicker__time-container {
+  display: none !important;
+}
+
